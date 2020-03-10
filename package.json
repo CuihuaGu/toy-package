@@ -1,0 +1,51 @@
+{
+  "name": "toy-package",
+  "version": "2.0.0",
+  "description": "toy package",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "typings": "lib/index.d.js",
+  "files": [
+    "lib",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuihuaGu/toy-package.git"
+  },
+  "scripts": {
+    "test": "jest --coverage --verbose -u",
+    "api": "api-extractor run",
+    "build": "gulp build",
+    "changelog": "gulp changelog",
+    "prepublishOnly": "npm lint & npm test & npm changelog & npm build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.7.8",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "@types/fs-extra": "^8.1.0",
+    "@types/gulp": "^4.0.6",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "chalk": "^3.0.0",
+    "conventional-changelog-cli": "^2.0.31",
+    "eslint": "^6.8.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "fs-extra": "^8.1.0",
+    "gulp": "^4.0.2",
+    "jest": "^25.1.0",
+    "rollup": "^2.0.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
